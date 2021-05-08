@@ -1,0 +1,100 @@
+
+
+.fullblock
+{
+    
+    display:flex;
+   
+}
+.leftblock
+{
+    margin-top:3rem;
+    display:flex;
+    flex:30rem;
+    transform:translateY(-10px);
+    justify-content:flex-end;
+    flex-direction:column;
+    padding:2rem; 
+}
+.leftblock:before
+{
+    content:"";
+    background:linear-gradient(#e76e0b,#f72257,#286468);
+    position:absolute;
+    width:calc(100% + 15px);
+    height:calc(100% + 15px);
+    left:-7.5px;
+    top:-7.5px;
+    border-radius:15px
+}
+.leftblock:after
+{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+   
+}
+.leftblock>*
+{
+    position:relative;
+    z-index:3
+}
+
+.cardblock
+{
+    display:flex;
+    padding:2rem 0 2rem 1rem;
+    overflow-x:scroll;
+  
+}
+ .cardblock::-webkit-scrollbar
+ {
+     width:15px;
+     height:15px
+ }
+
+.cardblock::-webkit-scrollbar-thumb
+{
+    background:#6e6e6e;
+}
+
+ .cardblock::-webkit-scrollbar-track
+ {
+     background:linear-gradient(#6b6a6a,#2e2e2e ,#111010,#201a1a)
+ }
+ .card
+ {
+     color:#fff;
+     display:flex;
+     padding:1.5rem;
+     background:linear-gradient(#616060,#1a1919);
+     border-radius:10px;
+     flex-direction:column;
+     transition:.5s;
+     min-width:250px;
+     min-height:300px;
+     
+ }
+.card:hover
+{
+    transform:translateY(-1.5rem) rotate(4deg);
+    
+}
+ .card:hover~.card
+{
+    transform:translateX(100px);
+}
+.card:not(:first-child)
+{
+    margin-left:-100px;
+    box-shadow:-2rem 0 2rem -1.5rem rgb(10, 9, 9);
+}
+
+
+
+
+
